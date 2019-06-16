@@ -36,7 +36,7 @@ defmodule JsonRex.MixProject do
   defp rustler_crates do
     [
       jrex: [
-        path: "/native/jrex",
+        path: "native/jrex",
         mode: rustc_mode(Mix.env())
       ]
     ]

@@ -1,27 +1,18 @@
-#[macro_use] extern crate rustler;
-#[macro_use] extern crate rustler_codegen;
-#[macro_use] extern crate lazy_static;
+#[macro_use]
+extern crate rustler;
 
-use rustler::{Env, Term, NifResult, Encoder};
+#[macro_use]
+extern crate lazy_static;
+extern crate rustler_codegen;
 
-mod atoms {
-    rustler_atoms! {
-        atom ok;
-        //atom error;
-        //atom __true__ = "true";
-        //atom __false__ = "false";
-    }
-}
+extern crate serde;
+extern crate serde_json;
+
+mod atoms;
+mod decoder;
 
 rustler_export_nifs! {
     "Elixir.JRex",
-    [("add", 2, add)],
+    [("decode", 1, decoder::decode)],
     None
-}
-
-fn add<'a>(env: Env<'a>, args: &[Term<'a>]) -> NifResult<Term<'a>> {
-    let num1: i64 = args[0].decode()?;
-    let num2: i64 = args[1].decode()?;
-
-    Ok((atoms::ok(), num1 + num2).encode(env))
 }
