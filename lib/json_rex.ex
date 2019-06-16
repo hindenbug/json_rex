@@ -1,5 +1,5 @@
 defmodule JsonRex do
-  use Rustler, otp_app: :jrex, crate: :jrex
+  use Rustler, otp_app: :json_rex, crate: :jrex
 
   @moduledoc """
   Documentation for Jrex

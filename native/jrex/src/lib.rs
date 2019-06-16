@@ -12,7 +12,7 @@ mod atoms;
 mod decoder;
 
 rustler_export_nifs! {
-    "Elixir.JRex",
+    "Elixir.JsonRex",
     [("decode", 1, decoder::decode)],
     None
 }
