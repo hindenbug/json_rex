@@ -7,4 +7,5 @@ defmodule JsonRex do
 
   def encode(_data), do: :erlang.nif_error("nif not loaded")
   def decode(_data), do: :erlang.nif_error("nif not loaded")
+  def decode_dirty(_data), do: :erlang.nif_error("nif not loaded")
 end
