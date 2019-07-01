@@ -1,4 +1,4 @@
-# JsonRex
+# JsonREX
 
 **TODO: Add description**
 
