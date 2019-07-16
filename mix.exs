@@ -29,7 +29,10 @@ defmodule JsonRex.MixProject do
   # Run "mix help deps" to learn about dependencies.
   defp deps do
     [
-      {:rustler, "~> 0.20.0"}
+      {:rustler, "~> 0.20.0"},
+      {:benchee, "~> 1.0"},
+      {:jiffy, "~> 1.0"},
+      {:poison, "~> 3.0"}
     ]
   end
 

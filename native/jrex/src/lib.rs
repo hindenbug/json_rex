@@ -3,8 +3,7 @@ extern crate rustler;
 extern crate lazy_static;
 extern crate rustler_codegen;
 
-extern crate serde;
-extern crate serde_json;
+extern crate json;
 
 use rustler::schedule::SchedulerFlags::*;
 
